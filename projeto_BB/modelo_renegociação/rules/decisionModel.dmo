@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>2f3e0354-70ab-45a6-a631-98a9c9f5b366</uuid>
+  <locale>pt_BR</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="pt_BR"/>
+    </extensionElements>
+    <inputData id="node_0" name="Faturas_RPA">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="false" name="Faturas_RPA"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Faturas_RPA" typeRef="java.lang.Double"/>
+    </inputData>
+    <decision id="node_1" name="Resultado_tabela">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Faturas_RPA"/>
+                <output bomType="java.lang.String" collection="false" name="Resultado_tabela"/>
+                <rule defaultRule="false" href="node_1/Tabela%20de%20Score.dmt" kind="DecisionTable" name="Tabela de Score"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Resultado_tabela" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Prime">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Boolean" collection="false" name="Prime"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Prime" typeRef="java.lang.Boolean"/>
+    </inputData>
+    <decision id="node_3" name="Decisões_Tabela">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Resultado_tabela"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Prime"/>
+                <output bomType="java.lang.String" collection="false" name="Decisões_Tabela"/>
+                <rule defaultRule="false" href="node_3/Cenario200.drl" kind="BusinessRule" name="Cenario200"/>
+                <rule defaultRule="false" href="node_3/Cenario200prime.drl" kind="BusinessRule" name="Cenario200prime"/>
+                <rule defaultRule="false" href="node_3/Cenario400.drl" kind="BusinessRule" name="Cenario400"/>
+                <rule defaultRule="false" href="node_3/Cenario400prime.drl" kind="BusinessRule" name="Cenario400prime"/>
+                <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Decisões_Tabela" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

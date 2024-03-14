@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="modelo_renegociação">
+  <name>modelo_renegociação</name>
+  <uuid>9acdc51b-30f9-4699-b1ad-d92f012c1e33</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#2f3e0354-70ab-45a6-a631-98a9c9f5b366"/>
+  <targetRuleProject href="../../modelo_renegocia%C3%A7%C3%A3o#04c466fd-45e5-4858-b496-4e168aa490ff"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
