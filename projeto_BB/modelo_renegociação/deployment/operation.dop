@@ -4,4 +4,13 @@
   <uuid>9acdc51b-30f9-4699-b1ad-d92f012c1e33</uuid>
   <decisionModel href="../rules/decisionModel.dmo#2f3e0354-70ab-45a6-a631-98a9c9f5b366"/>
   <targetRuleProject href="../../modelo_renegocia%C3%A7%C3%A3o#04c466fd-45e5-4858-b496-4e168aa490ff"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["modelo_renegocia\u00E7\u00E3o"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>
