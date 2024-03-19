@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Cenario400</name>
-  <uuid>7660958c-59aa-46a3-a95b-e9e43f0924f0</uuid>
+  <name>Cenario400prime</name>
+  <uuid>ba58b342-67a5-49b6-a1cf-a5bf4e63e008</uuid>
   <locale>pt_BR</locale>
   <definition><![CDATA[se
-	Resultado_tabela é "400" 
+	Conversao_Media_Score é "400"
+	e Prime 
 então
-	atribuir à decisão o valor "Reprovado" ;]]></definition>
+	atribuir à decisão o valor verdadeiro ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>

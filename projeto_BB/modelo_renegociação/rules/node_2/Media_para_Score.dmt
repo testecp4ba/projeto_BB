@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
-  <name>Tabela de Score</name>
-  <uuid>89a75907-c03c-4ba8-9173-06feb0a8b03e</uuid>
+  <name>Media_para_Score</name>
+  <uuid>7ff913a5-80c6-4245-9853-0915de082d6a</uuid>
   <locale>pt_BR</locale>
   <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
     <Body>
@@ -13,7 +13,7 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[Faturas_RPA é ao menos igual a <min> e menor que <max>]]></Text>
+                        <Text><![CDATA[Media_RPA é ao menos igual a <min> e menor que <max>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
@@ -117,8 +117,8 @@
     </Body>
     <Resources DefaultLocale="pt_BR">
         <ResourceSet Locale="pt_BR">
-            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Faturas_RPA]]></Data>
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Resultado_tabela]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Media_RPA]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Conversao_Media_Score]]></Data>
         </ResourceSet>
     </Resources>
 </DT>

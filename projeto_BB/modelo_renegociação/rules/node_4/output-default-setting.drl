@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Cenario400prime</name>
-  <uuid>3f916bc3-5706-48b3-9e5a-5b5d784ed835</uuid>
+  <name>output-default-setting</name>
+  <uuid>a53831aa-43bf-4ba4-a034-25a41a048c3c</uuid>
   <locale>pt_BR</locale>
-  <definition><![CDATA[se
-	Resultado_tabela é "400"
-	e Prime 
-então
-	atribuir à decisão o valor "Gerente de renegociação precisa aprovar" ;]]></definition>
+  <definition><![CDATA[atribuir à decisão o valor falso ;]]></definition>
 </ilog.rules.studio.model.brl:ActionRule>
