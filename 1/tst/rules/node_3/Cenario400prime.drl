@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Cenario400prime</name>
+  <uuid>faba1673-f8ff-4129-b822-542783718487</uuid>
+  <locale>pt_BR</locale>
+  <definition><![CDATA[se
+	Conversao_Media_Score é "400"
+	e Prime 
+então
+	atribuir à decisão o valor verdadeiro ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
