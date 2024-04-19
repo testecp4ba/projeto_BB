@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Score">
+  <name>Score</name>
+  <uuid>7f868636-45cf-4b21-8cbf-9186cf7f8326</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#29edd219-2304-43f4-97f6-e19186628352"/>
+  <targetRuleProject href="../../Score#be2328f3-8575-4a19-b627-317ca3048c19"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["ScoreAprovacaoBB"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

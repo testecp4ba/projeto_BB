@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>29edd219-2304-43f4-97f6-e19186628352</uuid>
+  <locale>pt_BR</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="pt_BR"/>
+    </extensionElements>
+    <inputData id="node_0" name="Media_RPA">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="false" name="Media_RPA"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Media_RPA" typeRef="java.lang.Double"/>
+    </inputData>
+    <decision id="node_1" name="Conversao_Media_Score">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Media_RPA"/>
+                <output bomType="java.lang.String" collection="false" name="Conversao_Media_Score"/>
+                <rule defaultRule="false" href="node_1/Media_para_Score.dmt" kind="DecisionTable" name="Media_para_Score"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Conversao_Media_Score" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_3" name="Prime">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Boolean" collection="false" name="Prime"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Prime" typeRef="java.lang.Boolean"/>
+    </inputData>
+    <decision id="node_4" name="ResultadoTabela_Baixo">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="java.lang.String" collection="false" name="Conversao_Media_Score"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Prime"/>
+                <output bomType="java.lang.Boolean" collection="false" name="ResultadoTabela_Baixo"/>
+                <rule defaultRule="false" href="node_4/Cenario200prime.drl" kind="BusinessRule" name="Cenario200prime"/>
+                <rule defaultRule="false" href="node_4/Cenario400prime.drl" kind="BusinessRule" name="Cenario400prime"/>
+                <rule defaultRule="true" href="node_4/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="ResultadoTabela_Baixo" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_5" name="ResultadoTabela_Alto">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Conversao_Media_Score"/>
+                <output bomType="java.lang.Boolean" collection="false" name="ResultadoTabela_Alto"/>
+                <rule defaultRule="false" href="node_5/CenarioAlto.dmt" kind="DecisionTable" name="CenarioAlto"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="ResultadoTabela_Alto" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+</definitions>
+</definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>
