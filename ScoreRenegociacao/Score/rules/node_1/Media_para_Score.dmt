@@ -74,7 +74,7 @@
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["800"]]></Param>
+                                <Param><![CDATA["400"]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
